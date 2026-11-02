@@ -21,8 +21,9 @@ router.map({
     component: foo2
   },
 });
-router.beforeEach(function () {
+router.beforeEach(function (transition) {
   window.scrollTo(0, 0);
+  transition.next();
 });
 
 router.redirect({
